@@ -1,0 +1,9 @@
+1.) use bellow command to create vertual env in linux
+comsysapp@atul-Lenovo-G570:~/comsysapp/pythoncode$ python3.9 -m venv project_env
+
+2.) activate vertual environment in linux
+comsysapp@atul-Lenovo-G570:~/comsysapp/pythoncode$ source project_env/bin/activate
+
+3. generate requirements file
+(project_env) comsysapp@atul-Lenovo-G570:~/comsysapp/pythoncode$ pip3 freeze > requirements.txt
+

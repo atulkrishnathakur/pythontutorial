@@ -1,0 +1,42 @@
+1.) If you do not have PIP installed in windows, you can download and install it from this page: https://pypi.org/project/pip/
+
+2.) Note: If you have Python version 3.4 or later, PIP is included by default.
+
+3.) check pip version in windows
+pip -V
+
+4.) check pip version in windows
+pip --version
+
+5.) If you use macOS or Linux, you can launch the terminal and use the pip3 instead of pip.
+
+6.) check pip version in windows
+pip3 -V
+
+7.) check pip version in windows
+pip3 --version
+
+8.) Install a package in windows
+pip install <package_name>
+
+9.) Install a package in linux
+pip3 install <package_name>
+
+10.) To install a package with a specific version, you use the following command:
+pip install <package_name>==<version> 
+
+11.) List installed packages
+pip3 list
+
+12.) To check what packages are outdated, you use the following command
+pip3 list --outdated
+
+13.) Find more packages at https://pypi.org/.
+
+14.) Uninstall a package
+pip3 uninstall <package_name>
+
+15.) List dependencies of a package
+pip3 show <package_name>
+
+

@@ -1,0 +1,7 @@
+print(bool('Hi'))
+print(bool(''))
+print(bool(0))
+print(bool(101))
+print(bool(True))
+print(bool(False))
+print(bool(None))
