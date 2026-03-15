@@ -70,6 +70,6 @@ print(threading.current_thread())
 
 # Locks in python threading
 1. threading module provides a lock class to deal with the race conditions.
-2. Locks has two states.
-    2.1 **Locked:** The lock has been acquired by one thread and any thread that makes an attempt to acquire it must wait until it is released.
-    2.2 **Unlocked:** The lock has not been acquired and can be acquired by the next thread that makes an attempt. 
+2. Locks has two states.  
+    2.1 **Locked:** The lock has been acquired by one thread and any thread that makes an attempt to acquire it must wait until it is released.  
+    2.2 **Unlocked:** The lock has not been acquired and can be acquired by the next thread that makes an attempt.
