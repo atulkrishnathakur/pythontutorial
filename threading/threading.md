@@ -58,4 +58,18 @@ print(threading.current_thread())
 2. property name: native_id(assigned after thread has started)
 
 
-# Built-in functions for threading
+# thread join
+1. If a thread wants to wait for some other thread, then we should go for join() method.
+
+
+# What is race condition?
+1. It is a bug generated when you do multi-processing. It occures because two or more threads tries to update the save variable and results into unreliable output.
+2. Concurrent access to shared resource can lead to race condition.
+3. There are some technique to fix race condition bug. 1. Using Locks, 2. Using R-lock, 3. Using Semaphores.
+
+
+# Locks in python threading
+1. threading module provides a lock class to deal with the race conditions.
+2. Locks has two states.
+   2.1 Locked: The lock has been acquired by one thread and any thread that makes an attempt to acquire it must wait until it is released.
+   2.2 Unlocked: The lock has not been acquired and can be acquired by the next thread that makes an attempt. 
