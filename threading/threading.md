@@ -73,3 +73,104 @@ print(threading.current_thread())
 2. Locks has two states.  
     2.1 **Locked:** The lock has been acquired by one thread and any thread that makes an attempt to acquire it must wait until it is released.  
     2.2 **Unlocked:** The lock has not been acquired and can be acquired by the next thread that makes an attempt.
+3. follow the below steps  
+    3.1 Step-1(Create an object of Lock class).  
+    ```
+    from threading import *
+    mylock = Lock()
+    ```  
+    3.2 Step-2(Acquire lock using acquire())
+    ```
+    myloc.acquire(blocking=True,timeout=-1)
+    ```  
+    3.3 Step-3(Releas lock using release())
+    ```
+    mylock.release()
+    ```   
+
+# Rlocks in python threading
+1. You cannot acquire multiple times using Lock mechanism. By using Rlock, you can acquire() multiple times.
+2. Rlock is just a modified version of Lock 
+3. follow the below steps  
+    3.1 Step-1(Create an object of RLock class).  
+    ```
+    from threading import *
+    mylock = RLock()
+    ```  
+    3.2 Step-2(Acquire lock using acquire())
+    ```
+    myloc.acquire()
+    ```  
+    3.3 Step-3(Releas lock using release())
+    ```
+    mylock.release()
+    ``` 
+
+
+# Semaphore in python threading
+1. Semaphore can be used to limit the access to the shared resources with limited capacity.
+2. follow the below steps  
+    2.1 Step-1(Create an object of RLock class).  
+    ```
+    from threading import *
+    s = Semaphore()
+    ```  
+    2.2 Step-2(Acquire lock using acquire())
+    ```
+    s.acquire()
+    ```  
+    2.3 Step-3(Releas lock using release())
+    ```
+    s.release()
+    ``` 
+
+# Exception in thread
+1. If in one thread exception occured then other thread will work because every thread has separate memory
+2. The interpreter calles threading.excepthook() with one argument i.e named tuple with 4 arguments.  
+    2.1 the exception class
+    2.2 exception instance/value
+    2.3 A traceback object
+    2.4 Thread name
+3. For main thread sys.excepthook() will call
+4. For the created thread threading.excepthook() will call
+
+
+# Thread communication
+1. In concurrent programming, sometimes we need to co-ordinate threads.
+2. Thread communicate with each other via signals.
+3. Three ways for thread communication:  
+    3.1 By creating event object
+    3.2 By creating condition object
+    3.3 By using queue module 
+
+# communicate thread using `event`
+1. By `event` only two thread will communicate from each other
+```
+import threading
+import time 
+
+e = threading.Event()
+
+def task():
+    print("Game is started ......")
+    time.sleep(5)
+    e.set()  # change the thread flag from "False" to "True"
+
+
+def end():
+    e.wait() # wait for t1 thread
+    if e.is_set(): # is_set return True when t1 thread set True then code will execute 
+        print("Code for destroying session")
+
+
+t1 = threading.Thread(target=task)
+t2 = threading.Thread(target=end)
+
+t1.start()
+t2.start()
+
+```
+
+# communicate thread using `condition object`
+1. It solve limitations of `event` communication
+
