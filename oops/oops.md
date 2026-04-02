@@ -113,5 +113,3 @@ class Employee(object):
 # name mangling in python
 1. Private varibale can be access outside of class by `_classname.__variable_name`. because python change the private variable name. So it is called name mangling.
 2. In python we can access variable by name mangling. So python does not follow full concept to encapsulation. 
-
-# video 26 start from zero
